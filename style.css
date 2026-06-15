@@ -3,5 +3,18 @@
     height:50px;
 }
 .board {
-    background-color:blue;
+    background-color:#f5dd9f;
+    height:75px;
+    width:400px;
+    border-radius:5px;
+}
+html {
+    background-color:#effacd;
+}
+.controls button {
+    background-color:gray;
+    border: 2px lightgray solid;
+    border-radius: 5px;
+    padding:15px 25px;
+
 }
