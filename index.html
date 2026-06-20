@@ -5,24 +5,40 @@
     </head>
     <body>
         <div class = "choices">
-            <span class = "choice" id = "1">1</span>
-            <span class = "choice" id = "2">2</span>
-            <span class = "choice" id = "3">3</span>
-            <span class = "choice" id = "4">4</span>
-            <span class = "choice" id = "5">5</span>
+            <table>
+                <tbody class = "row">
+                    <tr class = "choice"><td class = "choiceP">1<td class = "choiceScoreP" id = "1Score"></td></tr>
+                    <tr class = "choice"><td class = "choiceP">2<td class = "choiceScoreP" id = "2Score"></td></tr>
+                    <tr class = "choice"><td class = "choiceP">3<td class = "choiceScoreP" id = "3Score"></td></tr>
+                    <tr class = "choice"><td class = "choiceP">4<td class = "choiceScoreP" id = "4Score"></td></tr>
+                    <tr class = "choice"><td class = "choiceP">5<td class = "choiceScoreP" id = "5Score"></td></tr>
+                    <tr class = "choice"><td class = "choiceP">6<td class = "choiceScoreP" id = "6Score"></td></tr>
+                </tbody>
+            </table>
+            <table class = "row" id = "row2">
+                <tbody class = "row">
+                    <tr class = "choice"><td class = "choiceP">3 kind<td class = "choiceScoreP" id = "3Kind"></td></tr>
+                    <tr class = "choice"><td class = "choiceP">4 kind<td class = "choiceScoreP" id = "4Kind"></td></tr>
+                    <tr class = "choice"><td class = "choiceP">full house<td class = "choiceScoreP" id = "fullHouse"></td></tr>
+                    <tr class = "choice"><td class = "choiceP">small str.<td class = "choiceScoreP" id = "smallStr"></td></tr>
+                    <tr class = "choice"><td class = "choiceP">large str.<td class = "choiceScoreP" id = "largeStr"></td></tr>
+                    <tr class = "choice"><td class = "choiceP">chance<td class = "choiceScoreP" id = "chance"></td></tr>
+                </tbody>
+            </table>
         </div>
         <div class = "board">
 
         </div>
         <div class = "diceRoll">
-            <div id = "dice1"></div>
-            <div id = "dice2"></div>
-            <div id = "dice3"></div>
-            <div id = "dice4"></div>
-            <div id = "dice5"></div>
+            <div onclick = "hold(this)" id = "dice1" class = "1 free"></div>
+            <div onclick = "hold(this)" id = "dice2" class = "2 free"></div>
+            <div onclick = "hold(this)" id = "dice3" class = "3 free"></div>
+            <div onclick = "hold(this)" id = "dice4" class = "4 free"></div>
+            <div onclick = "hold(this)" id = "dice5" class = "5 free"></div>
         </div>
         <div class = "controls">
             <button onclick = "roll()">roll</button>
+            <p id = "rollsNum">rolls: 3</p>
         </div>
         <script src = "script.js"></script>
     </body>
