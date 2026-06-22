@@ -63,5 +63,6 @@ function checkPossibleScores() {
                 var ones = ones + 1;
             }
         }
+        console.log("ones: " + ones);
     }
 }
