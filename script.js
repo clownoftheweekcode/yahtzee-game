@@ -12,6 +12,7 @@ function roll() {
         rolls = rolls - 1;
         generateNums();
         setDiceNums();
+        checkPossibleScores();
     }
     
 }
@@ -51,5 +52,16 @@ function hold(dieNum) {
         }
     } else {
         
+    }
+}
+
+
+function checkPossibleScores() {
+    if (rollNums.includes(1)) {
+        for (p = 0; p < rollNums.length; p++) {
+            if (rollNums[p] === 1) {
+                var ones = ones + 1;
+            }
+        }
     }
 }
