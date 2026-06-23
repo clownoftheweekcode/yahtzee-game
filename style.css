@@ -11,17 +11,19 @@
 html {
     background-color:#effacd;
 }
-.controls button {
-    background-color:gray;
-    border: 2px lightgray solid;
-    border-radius: 5px;
-    padding:15px 25px;
 
+.controls button {
+    padding:15px 25px;
+    border:solid gray 2px;
+    border-radius:5px;
+    background-color:lightgray;
 }
+
 #content {
     width:500px;
     height:500px;
 }
+
 #content div, #content table {
     text-align:center;
     margin:auto;
@@ -30,38 +32,50 @@ html {
 .row {
     width:400px;
 }
-
 tr {
     display:inline-block;
     border:2px solid black;
     background-color:white;
 }
-
 td {
     width:25px;
 }
 .choiceP {
     border-right:2px solid black;
 }
-
 #row2 tr .choiceP {
     height:38px;
 }
-
+ /* .diceRoll div {
+    display:inline-block;
+    width:30px;
+    height:30px;
+    margin:0px;
+    background-color:white; 
+    border:solid 2px black;
+} */
 .diceRoll div {
     display:inline-block;
     width:30px;
     height:30px;
     margin:0px;
-    border:2px solid black;
+    border:solid 2px black;
+}
+.held {
+    background-color:blue;
+}
+.diceRoll div p {
+    margin:6px 10px;
 }
 .held {
     background-color:lightgray;
 }
+.diceRoll div .held {
+    background-color:lightGray;
+}
 .free {
     background-color:white;
 }
-
 .diceRoll {
     max-width:500px;
 }
