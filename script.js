@@ -6,10 +6,16 @@ let heldDie = [false,false,false,false,false];
 let answeredSingles = [false, false, false, false, false];
 let rolls = 3;
 let rollP = document.getElementById('rollsNum');
+let choseScore = false;
 // when you roll and you hold, if it doesnt equal 0 (placeholder), replace it
 function roll() {
     if (rolls < 1) {
-        
+        if (choseScore === true) {
+            rolls = 3;
+            generateNums();
+            setDiceNums();
+            checkPossibleScores();
+        }
     } else {
         rolls = rolls - 1;
         generateNums();
@@ -68,12 +74,12 @@ function checkPossibleScores() {
     console.clear();
     possScores.forEach(score => {
         score.num = rollNums.filter(num => num === score.name).length;
-        score.value = score.name * score.num;
+        score.value = score.name * score.num; // gets score by multiplying the number of that die by the value of the die
         // console.log(score.value);
     });
     for (w = 0; w < possScores.length; w++) {
-        let val = possScores[w].value;
-        if (answeredSingles[w] != true || answeredSingles[w].style.color != "black") {
+        let val = possScores[w].value; // sets all text content to the value of the score
+        if (answeredSingles[w] != true) { // sets all text that is blue has n
             allScoreSingles[w].textContent = val;
             allScoreSingles[w].style.color = "blue";
             // make it so that when you roll again it doesnt remove the value
@@ -90,6 +96,7 @@ function click() {
             if (answeredSingles[score] != true) {
                 // amek it so that it goes through every element and resets the text content except for the one you clicked
                 score.style.color = "black";
+                choseScore = true;
                 for (e=0;e<possScores.length; e++) {
                     if (allScoreSingles[e].style.color === "blue") {
                         allScoreSingles[e].textContent = "";
