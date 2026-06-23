@@ -30,8 +30,13 @@ function generateNums() {
         if (heldDie[i]) {
             
         } else {
-            let num = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+            if (answeredSingles[i] === true) {
+                
+            } else {
+                let num = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
             rollNums[i] = num;
+            }
+            
         }
             
     }
@@ -94,14 +99,7 @@ function click() {
     allScoreSingles.forEach(score => {
         score.addEventListener('click', function(vali){
             if (answeredSingles[score] != true) {
-                // amek it so that it goes through every element and resets the text content except for the one you clicked
-                score.style.color = "black";
-                choseScore = true;
-                for (e=0;e<possScores.length; e++) {
-                    if (allScoreSingles[e].style.color === "blue") {
-                        allScoreSingles[e].textContent = "";
-                    }
-                }
+                answeredSingles[score] = true;
             }
         });
     });
